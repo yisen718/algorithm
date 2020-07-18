@@ -18,6 +18,36 @@ LinkedList* insert_into_linkedlist(LinkedList* head, int value)
     return new_node;
 }
 
+LinkedList* delete_from_linkedlist(LinkedList* head, int value)
+{
+    LinkedList* p = head;
+    while (p != NULL && p->value != value)
+    {
+        p = p->next;
+    }
+
+    if (p != NULL)
+    {
+        // first element
+        if (p->prev == NULL)
+        {
+            head = p->next;
+        }
+        else
+        {
+            p->prev->next = p->next;
+
+            if (p->next != NULL)
+            {
+                p->next->prev = p->prev;
+            }
+        }
+        free(p);
+    }
+
+    return head;
+}
+
 void print_linkedlist(LinkedList* head)
 {
     LinkedList* p = head;

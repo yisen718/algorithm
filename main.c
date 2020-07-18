@@ -15,6 +15,14 @@ int main ()
 		head = insert_into_linkedlist(head, i);
 	}
 
+	for (int i = 1; i < 1000; i++)
+	{
+		if (i % 3 == 0)
+		{
+			head = delete_from_linkedlist(head, i);
+		}
+	}
+
 	print_linkedlist(head);
 	
 	return 0;

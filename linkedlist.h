@@ -10,5 +10,7 @@ typedef struct LinkedList
 LinkedList* insert_into_linkedlist(LinkedList* head, int value);
 
 
+LinkedList* delete_from_linkedlist(LinkedList* head, int value);
+
 
 void print_linkedlist(LinkedList* head);
