@@ -15,28 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="src\fun.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fun.c">
+    <ClCompile Include="src\linkedlist.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linkedlist.c">
+    <ClCompile Include="src\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stack.c">
+    <ClCompile Include="src\stack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\to_number.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datetime.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fun.h">
+    <ClInclude Include="src\fun.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linkedlist.h">
+    <ClInclude Include="src\linkedlist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stack.h">
+    <ClInclude Include="src\stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\to_number.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\datetime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

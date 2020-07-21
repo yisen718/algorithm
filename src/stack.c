@@ -1,5 +1,5 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "stack.h"
 
 
@@ -33,6 +33,7 @@ int pop_from_stack(Stack* s)
         free(p);
         return out;
     }
+    // TODO: code completetion
     exit(-1);
     return 0;
 }
