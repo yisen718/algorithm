@@ -23,6 +23,7 @@
     <ClCompile Include="src\fun.c" />
     <ClCompile Include="src\linkedlist.c" />
     <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\queue.c" />
     <ClCompile Include="src\stack.c" />
     <ClCompile Include="src\to_number.c" />
   </ItemGroup>
@@ -30,6 +31,7 @@
     <ClInclude Include="src\datetime.h" />
     <ClInclude Include="src\fun.h" />
     <ClInclude Include="src\linkedlist.h" />
+    <ClInclude Include="src\queue.h" />
     <ClInclude Include="src\stack.h" />
     <ClInclude Include="src\to_number.h" />
   </ItemGroup>
