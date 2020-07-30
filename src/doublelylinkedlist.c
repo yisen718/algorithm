@@ -1,8 +1,8 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
-#include "linkedlist.h"
+#include "doublelylinkedlist.h"
 
-LinkedList* insert_into_linkedlist(LinkedList* head, int value)
+LinkedList* insert_into_doublely_linkedlist(LinkedList* head, int value)
 {
     LinkedList* new_node = malloc(sizeof(LinkedList));
     if (new_node == NULL)
@@ -17,7 +17,7 @@ LinkedList* insert_into_linkedlist(LinkedList* head, int value)
     return new_node;
 }
 
-LinkedList* delete_from_linkedlist(LinkedList* head, int value)
+LinkedList* delete_from_doublely_linkedlist(LinkedList* head, int value)
 {
     LinkedList* p = head;
     while (p != NULL && p->value != value)
@@ -35,11 +35,12 @@ LinkedList* delete_from_linkedlist(LinkedList* head, int value)
         else
         {
             p->prev->next = p->next;
+        }
 
-            if (p->next != NULL)
-            {
-                p->next->prev = p->prev;
-            }
+        // last element
+        if (p->next != NULL)
+        {
+            p->next->prev = p->prev;
         }
         free(p);
     }
@@ -47,7 +48,25 @@ LinkedList* delete_from_linkedlist(LinkedList* head, int value)
     return head;
 }
 
-void print_linkedlist(LinkedList* head)
+LinkedList* delete_from_double_linkedlist_by_given_position(LinkedList* head, LinkedList* posi)
+{
+    if (posi->prev != NULL)
+    {
+        posi->prev->next = posi->next;
+    }
+    else
+    {
+        head = posi->next;
+    }
+    if (posi->next != NULL)
+    {
+        posi->next->prev = posi->prev;
+    }
+    free(posi);
+    return head;
+}
+
+void print_doublely_linkedlist(LinkedList* head)
 {
     LinkedList* p = head;
     while (p != NULL)
