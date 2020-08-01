@@ -8,7 +8,7 @@ void insertion_sort(int* a, int len)
     {
         int key = a[j];
         int i = j - 1;
-        while (i >= 0 && a[i] < key)
+        while (i >= 0 && a[i] > key)
         {
             // 向后移
             a[i + 1] = a[i];
@@ -27,8 +27,8 @@ void merge(int* a, int p, int q, int r)
     const int n2 = r - q;
 
     // 声明并复制数组
-    int* left = malloc((n1 + 1) * 4);
-    int* right = malloc((n2 + 1) * 4);
+    int* left = (int*)malloc((n1 + 1) * 4);
+    int* right = (int*)malloc((n2 + 1) * 4);
 
     for (int i = 0; i < n1; i++)
     {

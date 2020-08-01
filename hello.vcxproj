@@ -19,15 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\binary_tree.c" />
-    <ClCompile Include="src\datetime.c" />
-    <ClCompile Include="src\fun.c" />
-    <ClCompile Include="src\doublelylinkedlist.c" />
-    <ClCompile Include="src\main.c" />
-    <ClCompile Include="src\queue.c" />
-    <ClCompile Include="src\sort.c" />
-    <ClCompile Include="src\stack.c" />
-    <ClCompile Include="src\to_number.c" />
+    <ClCompile Include="src\binary_tree.cpp" />
+    <ClCompile Include="src\datetime.cpp" />
+    <ClCompile Include="src\fun.cpp" />
+    <ClCompile Include="src\doublelylinkedlist.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\queue.cpp" />
+    <ClCompile Include="src\sort.cpp" />
+    <ClCompile Include="src\stack.cpp" />
+    <ClCompile Include="src\to_number.cpp" />
+    <ClCompile Include="tests\test_sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\binary_tree.h" />
@@ -43,6 +44,7 @@
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
+    <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -179,5 +181,14 @@
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
+    <Import Project="packages\googletest.redist.1.8.3\build\native\googletest.redist.targets" Condition="Exists('packages\googletest.redist.1.8.3\build\native\googletest.redist.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets'))" />
+    <Error Condition="!Exists('packages\googletest.redist.1.8.3\build\native\googletest.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\googletest.redist.1.8.3\build\native\googletest.redist.targets'))" />
+  </Target>
 </Project>

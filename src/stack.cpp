@@ -10,7 +10,7 @@ bool stack_is_empty(Stack* s)
 
 bool push_to_stack(Stack* s, int value)
 {
-    Node* node = malloc(sizeof(Node));
+    Node* node = (Node*)malloc(sizeof(Node));
     node->next = NULL;
     if (node == NULL)
     {

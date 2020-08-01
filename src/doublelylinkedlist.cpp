@@ -4,7 +4,7 @@
 
 LinkedList* insert_into_doublely_linkedlist(LinkedList* head, int value)
 {
-    LinkedList* new_node = malloc(sizeof(LinkedList));
+    LinkedList* new_node = (LinkedList*)malloc(sizeof(LinkedList));
     if (new_node == NULL)
     {
         fprintf(stderr, "malloc for new_node failed");
