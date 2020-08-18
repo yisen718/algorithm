@@ -45,6 +45,12 @@
     <ClCompile Include="tests\test_sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\test_stack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_linkedlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\fun.h">
@@ -80,5 +86,7 @@
     <None Include=".gitignore" />
     <None Include="README.md" />
     <None Include="packages.config" />
+    <None Include="CppProperties.json" />
+    <None Include="hello.vcxproj.yisen614.nvuser" />
   </ItemGroup>
 </Project>

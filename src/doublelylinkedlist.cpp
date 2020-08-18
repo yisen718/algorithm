@@ -1,5 +1,4 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
+﻿#include<iostream>
 #include "doublelylinkedlist.h"
 
 LinkedList* insert_into_doublely_linkedlist(LinkedList* head, int value)
@@ -71,7 +70,7 @@ void print_doublely_linkedlist(LinkedList* head)
     LinkedList* p = head;
     while (p != NULL)
     {
-        printf("Linkedlist element: %d\n", p->value);
+        std::cout << "Linkedlist elemen: " << p->value << std::endl;
         p = p->next;
     }
 }

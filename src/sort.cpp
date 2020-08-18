@@ -4,7 +4,7 @@
 void insertion_sort(int* a, int len)
 {
     // 1, 2, 9, 5, 2, 3, 6
-    for (int j = 1; j < len; j++)
+    for (size_t j = 1; j < len; j++)
     {
         int key = a[j];
         int i = j - 1;
@@ -30,11 +30,11 @@ void merge(int* a, int p, int q, int r)
     int* left = (int*)malloc((n1 + 1) * 4);
     int* right = (int*)malloc((n2 + 1) * 4);
 
-    for (int i = 0; i < n1; i++)
+    for (size_t i = 0; i < n1; i++)
     {
         left[i] = a[p + i];
     }
-    for (int i = 0; i < n2; i++)
+    for (size_t i = 0; i < n2; i++)
     {
         right[i] = a[q + i + 1];
     }
@@ -44,7 +44,7 @@ void merge(int* a, int p, int q, int r)
     right[n2] = 10000;
 
     // 开始合并数组到原数组中
-    for (int i = 0, j = 0, k = p; k <= r; k++)
+    for (size_t i = 0, j = 0, k = p; k <= r; k++)
     {
         if (left[i] <= right[j])
         {

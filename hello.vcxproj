@@ -28,7 +28,9 @@
     <ClCompile Include="src\sort.cpp" />
     <ClCompile Include="src\stack.cpp" />
     <ClCompile Include="src\to_number.cpp" />
+    <ClCompile Include="tests\test_linkedlist.cpp" />
     <ClCompile Include="tests\test_sort.cpp" />
+    <ClCompile Include="tests\test_stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\binary_tree.h" />
@@ -44,6 +46,8 @@
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
+    <None Include="CppProperties.json" />
+    <None Include="hello.vcxproj.yisen614.nvuser" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>

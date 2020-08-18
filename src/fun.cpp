@@ -14,7 +14,7 @@ bool is_prime(int digit)
     {
         return false;
     }
-    for (int i = 2; i * i < digit; i++)
+    for (size_t i = 2; i * i < digit; i++)
     {
         if (digit % i == 0)
         {
@@ -50,7 +50,7 @@ int max_int(int n, ...)
     va_start(ap, n);
     largest = va_arg(ap, int);
 
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
         current = va_arg(ap, int);
         if (current > largest)

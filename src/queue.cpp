@@ -33,7 +33,6 @@ void enqueue(Queue* q, int x)
         // 上溢
         fprintf(stderr, "Overflow, no place to enqueue");
     }
-
 }
 
 int dequeue(Queue* q)

@@ -1,16 +1,35 @@
 ﻿#include <gtest/gtest.h>
+#include <iostream>
+#include <random>
 #include "../src/sort.h"
 
-namespace TestSortFuncs
+#define MAX_LEN 100
+
+
+TEST(TestSort, TestInsertionSort)
 {
-    TEST(TestInsertionSort, TestSort)
+    int* arr = (int*)malloc(MAX_LEN * 4);
+    for (size_t i = 0; i < MAX_LEN; i++)
     {
-        int arr[] = { 2, 3, 1, 5, 2, 6, 8, 1, 9 };
-        int len = sizeof(arr) / sizeof(arr[0]);
-        insertion_sort(arr, len);
-        for (int i = 1; i < len; i++)
-        {
-            EXPECT_TRUE(arr[i] >= arr[i - 1]);
-        }
+        arr[i] = rand() % 100 + 1;
+    }
+    insertion_sort(arr, MAX_LEN);
+    for (size_t i = 1; i < MAX_LEN; i++)
+    {
+        EXPECT_TRUE(arr[i] >= arr[i - 1]);
+    }
+}
+
+TEST(TestSort, TestMergeSort)
+{
+    int* arr = (int*)malloc(MAX_LEN * 4);
+    for (size_t i = 0; i < MAX_LEN; i++)
+    {
+        arr[i] = rand() % 100 + 1;
+    }
+    merge_sort(arr, 0, MAX_LEN);
+    for (size_t i = 1; i < MAX_LEN; i++)
+    {
+        EXPECT_TRUE(arr[i] >= arr[i - 1]);
     }
 }
